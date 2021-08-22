@@ -1,0 +1,38 @@
+[
+	{
+		"name": "teclado",
+		"precio": "5140",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgtc-shop.com%2Fproducto%2Fteclado-mecanico-gamer-kgg-007%2F&psig=AOvVaw2Xe1Pxx-LlWJaV8aUNeE69&ust=1629185103926000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCjws2BtfICFQAAAAAdAAAAABAD",
+		"id": 0
+	},
+	{
+		"name": "mouse",
+		"precio": "1500",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbucamarcas.com%2Fmouse-logitech-g203-lightsync%2F&psig=AOvVaw1HfVSSF7YtolAZz-AbkVUV&ust=1629185151950000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMCDj-WBtfICFQAAAAAdAAAAABAD",
+		"id": 1
+	},
+	{
+		"name": "monitor",
+		"precio": "135500",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.muycomputer.com%2F2020%2F05%2F22%2Fmonitores-guia-de-compra%2F&psig=AOvVaw3RPHzMZLw-f2zay0l-sxvf&ust=1629185208407000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNij9YSCtfICFQAAAAAdAAAAABAD",
+		"id": 2
+	},
+	{
+		"name": "monitor",
+		"precio": "135500",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.muycomputer.com%2F2020%2F05%2F22%2Fmonitores-guia-de-compra%2F&psig=AOvVaw3RPHzMZLw-f2zay0l-sxvf&ust=1629185208407000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNij9YSCtfICFQAAAAAdAAAAABAD",
+		"id": 3
+	},
+	{
+		"name": "monitor",
+		"precio": "135500",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.muycomputer.com%2F2020%2F05%2F22%2Fmonitores-guia-de-compra%2F&psig=AOvVaw3RPHzMZLw-f2zay0l-sxvf&ust=1629185208407000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNij9YSCtfICFQAAAAAdAAAAABAD",
+		"id": 4
+	},
+	{
+		"name": "monitor",
+		"precio": "135500",
+		"thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.muycomputer.com%2F2020%2F05%2F22%2Fmonitores-guia-de-compra%2F&psig=AOvVaw3RPHzMZLw-f2zay0l-sxvf&ust=1629185208407000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNij9YSCtfICFQAAAAAdAAAAABAD",
+		"id": 5
+	}
+]
