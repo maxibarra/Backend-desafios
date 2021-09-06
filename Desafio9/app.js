@@ -1,5 +1,5 @@
 const express = require("express");
-const multer = require("multer");
+// const multer = require("multer");
 const app = express();
 // const router = express.Router();
 const api = require("./rutas/productos.route");
@@ -12,17 +12,17 @@ const api = require("./rutas/productos.route");
 //       });
 
 
-let storage = multer.diskStorage({
-    destination:function(req,file,callback){
-        callback(null,"uploads");
+// let storage = multer.diskStorage({
+//     destination:function(req,file,callback){
+//         callback(null,"uploads");
 
-    },
-    filename:function(req,file,callback){
-        callback(null,file.originalname+"-"+Date.now())
-    }
-})
+//     },
+//     filename:function(req,file,callback){
+//         callback(null,file.originalname+"-"+Date.now())
+//     }
+// })
 
-let upload = multer({storage});
+// let upload = multer({storage});
 
 // app.get('/error',(req,res,next)=>{
 
@@ -42,14 +42,14 @@ let upload = multer({storage});
 // })
 
 
-app.post('/multipleUpload',upload.array('MisArchivos',12),(req,res,next)=>{
-    if(!req.files)
-    {
-        const error = new Error("Sin archivos");
-        return next(error)
-    }
-    res.send(req.files)
-})
+// app.post('/multipleUpload',upload.array('MisArchivos',12),(req,res,next)=>{
+//     if(!req.files)
+//     {
+//         const error = new Error("Sin archivos");
+//         return next(error)
+//     }
+//     res.send(req.files)
+// })
 
 // app.use((req,res,next)=>{
 //  console.log('Middleware a nivel de App');

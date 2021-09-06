@@ -49,12 +49,12 @@ router.get('',(req,res)=>{
   
   });
   
- router.get("/productos/actualizar/:id",(req,res) =>{
+ router.put("/productos/actualizar/:id",(req,res) =>{
   
       res.send("Esta ruta actualizara el producto " +req.params.id);
   })
   
-  router.get("/productos/delete/:id",(req,res)=>{
+  router.delete("/productos/delete/:id",(req,res)=>{
     
 
       try {
@@ -65,7 +65,9 @@ router.get('',(req,res)=>{
           item.id = items.length - 1;
   
           fs.promises.readFile("./productos.json").then((data) => {
+
           let datos = Json.parse(data);
+          datos.delete(item);
            fs.promises.unlink("./productos.json",Json.stringify(datos),"utf-8")
           });
           res.status(200).json(item)
