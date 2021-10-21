@@ -15,7 +15,7 @@ router.get('',(req,res)=>{
 
 });
 
-  router.get("/productos/listar/:id",(req,res) => { 
+  router.get("/listar/:id",(req,res) => { 
   fs.promises
   .readFile("./productos.json")
   .then((datos) => {  
@@ -28,14 +28,14 @@ router.get('',(req,res)=>{
 
   });
   
-  router.get("/productos/guardar", (req, res) => {
+  router.get("/guardar", (req, res) => {
   
     try {
       const item = req.body;
       item.name = req.body.name;
       item.precio = req.body.precio;
       item.thumbnail = req.body.thumbnail;
-      item.id = items.length + 1;
+      item.id = item.length + 1;
   
       fs.promises.readFile("./productos.json").then((data) => {
         let datos = Json.parse(data);
@@ -49,20 +49,18 @@ router.get('',(req,res)=>{
   
   });
   
- router.put("/productos/actualizar/:id",(req,res) =>{
+ router.put("/actualizar/:id",(req,res) =>{
   
       res.send("Esta ruta actualizara el producto " +req.params.id);
   })
   
-  router.delete("/productos/delete/:id",(req,res)=>{
-    
-
+  router.delete("/delete/:id",(req,res)=>{
       try {
           const item = req.body;
           item.name = req.body.name;
           item.precio = req.body.precio;
           item.thumbnail = req.body.thumbnail;
-          item.id = items.length - 1;
+          item.id = item.length - 1;
   
           fs.promises.readFile("./productos.json").then((data) => {
 
@@ -71,7 +69,7 @@ router.get('',(req,res)=>{
            fs.promises.unlink("./productos.json",Json.stringify(datos),"utf-8")
           });
           res.status(200).json(item)
-          // res.send("se ha borrado el item " +req.params.id);
+          res.send("se ha borrado el item " +req.params.id);
           } catch (error) {
           return res.status(400).json({ error: "error al borrar producto" });
         }

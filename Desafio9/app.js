@@ -1,9 +1,13 @@
 const express = require("express");
-// const multer = require("multer");
 const app = express();
-// const router = express.Router();
-const api = require("./rutas/productos.route");
+const productRouter = require("./rutas/productos.route");
 
+app.use('/productos',productRouter);
+
+app.use(express.static('public'));
+app.listen(8080, () => {
+    console.log("puerto 8080");
+  });
 // app.get('',(req, res) => {
 //     res.send("esta ruta trae todos los productos");
 //   });
@@ -57,10 +61,5 @@ const api = require("./rutas/productos.route");
 // })
 
 
-app.use('/api',api);
 
-app.use(express.static('public'));
-app.listen(8080, () => {
-    console.log("puerto 8080");
-  });
 
