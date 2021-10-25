@@ -1,0 +1,27 @@
+<table class="table mt-5 table-secondary" >
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Thumbnail</th>
+            <th scope="col">Acciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productos}}
+            <tr id={{this.id}}>
+           <th scope="row"><a href="/productos/{{this.id}}">{{this.id}}</a></th>
+            <td>{{this.name}}</td>
+            <td>{{this.precio}}</td>
+            <td>{{this.imagen}}</td>
+            <td>
+               <button>Editar</button> 
+                <button >Borrar</button>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
