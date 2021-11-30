@@ -33,7 +33,7 @@ io.on('connection',(socket)=>{
       console.log(data);
       io.emit('user_keyup',{...data,id:socket.id});
 
-      productos.push({message:data.value,id:socket.id});
+      productos.push({message:data.value,id:socket.id,nombre:socket.nombre,precio:socket.precio});
     })
 
 
