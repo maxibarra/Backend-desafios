@@ -24,6 +24,6 @@ app.use(express.static(__dirname + '/public'));
 app.set("views","./views");
 
 app.set("view engine","ejs");
-app.listen(3030, () => {
+app.listen(3031, () => {
   console.log('escuchando en puerto 3030');
 });
