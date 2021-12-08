@@ -10,15 +10,16 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title></title>
+    <title>web socket</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
    
 
-      <label for="">nombre</label>
-    <input type="text" id="nombre" />
-    <label for="">precio</label>
-    <input type="text" id="precio" />
+      <label for="">Productos</label>
+    <input type="text" id="producto" />
+  
     
     
 
@@ -30,15 +31,15 @@
           <tr>
             <th> ID </th>
             <th> nombre  </th>
-            <th> precio </th>
+          
           </tr>
         </thead>
         <tbody>
           <% items.forEach(e=> { %>
           <tr class="table-success">
-            <td class="table-info"><% e.id %></td>
-            <td scope="row"><% e.nombre %></td>
-            <td class="table-danger"><% e.precio %></td>
+            <td class="table-info"><%= e.id %></td>
+            <td scope="row"><%= e.nombre %></td>
+           
           </tr>
           <% }) %>
         </tbody>
@@ -46,8 +47,8 @@
     </script>
 
     <div id="toRender"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="index.js"></script>
+    
   </body>
 </html>
