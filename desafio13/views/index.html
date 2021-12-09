@@ -9,35 +9,61 @@
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
-      />
+    />
     <title>web socket</title>
     <script src="/socket.io/socket.io.js"></script>
     <script src="index.js"></script>
   </head>
   <body>
-
-    <form action="" style="margin: 25px;">
+    <form action="" style="margin: 25px">
       <label for="">ID</label>
-      <input type="number" id="numID">
+      <input type="number" id="numID" />
       <label for=""> Producto</label>
-      <input type="text" id="producto" placeholder="ingresa un producto">
+      <input type="text" id="producto" placeholder="ingresa un producto" />
       <label for=""> Precio </label>
-      <input type="text" id="precio" placeholder="precio">
-      <input type="submit">
+      <input type="text" id="precio" placeholder="precio" />
+      <input type="submit" />
     </form>
 
-    
     <table class="table">
       <thead>
         <tr class="table-secondary">
-          <th> ID </th>
-          <th> Producto </th>
-          <th> Precio </th>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>Precio</th>
         </tr>
       </thead>
       <tbody id="products"></tbody>
     </table>
 
+    <div style="margin: 23rem 3rem 0 0; float: right">
+      <h2>Centro de mensajes</h2>
+      <div
+        id="messages"
+        style="border: 3px solid red; height: 150px; margin: 10px"
+      ></div>
+      <div id="chat">
+        <form action="">
+          <label for=""> Email: </label>
+          <input
+            type="email"
+            id="username"
+            placeholder="ingresa tu email"
+            required
+          />
+          <br />
+          <label for="">Consulta:</label>
+          <input
+            type="text"
+            id="text"
+            placeholder="Deje su consulta"
+            style="margin: 10px"
+          />
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
   </body>
